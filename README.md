@@ -2,6 +2,7 @@
 
 
 [code search][1]
+
 [oh-my-zsh][2]
 
 [1]:https://github.com/ggreer/the_silver_searcher
