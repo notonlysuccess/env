@@ -6,7 +6,7 @@ import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc5
 
 
 
-## [JsFormat](https://github.com/jdc0589/JsFormat)
+# [JsFormat](https://github.com/jdc0589/JsFormat)
 
 这是一款将JS格式化的插件
 
@@ -16,13 +16,14 @@ import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc5
 
 
 
-## [SideBarEnhancements](https://github.com/titoBouzout/SideBarEnhancements)
+# [SideBarEnhancements](https://github.com/titoBouzout/SideBarEnhancements)
 
 右键菜单增强插件
 
-## [Tag](https://github.com/SublimeText/Tag)
+# [Tag](https://github.com/SublimeText/Tag)
 
 这是HTML/XML标签缩进、补全、排版和校验工具
+
 
 # [SublimeCodeIntel](https://github.com/SublimeCodeIntel/SublimeCodeIntel)
 
