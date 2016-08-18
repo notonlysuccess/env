@@ -83,12 +83,18 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# git
 alias gs='git status'
 alias ga='git add -A'
 alias gc='git commit -m'
 alias gp='git push'
 alias gpu='git pull'
 
+# tmux
+alias tl='tmux ls'
+alias ta='tmux attach -t'
+
+# system
 alias cls='clear'
 alias ll='ls -l'
 alias la='ls -a'
