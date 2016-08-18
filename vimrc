@@ -141,74 +141,10 @@ if has("autocmd")
 end
 
 
-"快速编译C程序
-map<F5> :call Compile()<CR>
-func! Compile()
-    if &filetype == 'c'
-        exec "w"
-        exec "! clear;
-        \echo 正在编译: ./% ...;
-        \echo ;
-        \gcc % -g -o %<.o;
-        \echo ;
-        \echo 编译完成;"
-    endif
-endfunc
-
-"按Ctrl－F5 调试当前文件
-map <C-F5> :call Debug()<CR>
-
-func! Debug()
-    if &filetype == 'c'
-        exec "w"
-        exec "! clear;
-        \ echo 正在编译: ./% ...;
-        \ echo ;
-        \ gcc % -g -o %<.o;
-        \ echo ;
-        \ echo 编译完成,开始调试;
-        \ gdb %<.o;"
-    endif
-endfunc
-
-"按F6 执行
-map <F6> :call Run()<CR>
-func! Run()
-if &filetype == 'c'
-exec "! clear;
-\ ./%<.o;"
-endif
-endfunc
-
-"插入指定文件
-map <F7> :call InsertFile()<CR>
-func! InsertFile()
-exec "r your_file_path;"
-endfunc
-let mapleader=","
-
-let g:use_zen_expandabbr_key = '<c-y>'
-
-function! AutoPair(open, close)
-    let line = getline('.')
-    if col('.') > strlen(line) || line[col('.') - 1] == ' '
-        return a:open.a:close."\<ESC>i"
-    else
-        return a:open
-    endif
-endf
-                    
-function! ClosePair(char)
-    if getline('.')[col('.') - 1] == a:char
-        return "\<Right>"
-    else
-        return a:char
-    endif
-endf
 
 " Theme
 set background=dark
-colorscheme desert
+colorscheme monokai
 
 " Highlight current line
 "set cursorline
@@ -248,3 +184,12 @@ imap <S-Tab> <Tab><Down><Left><Left>
 " Jump between <div> and </div>.
 runtime macros/matchit.vim 
 filetype plugin on 
+
+" right click for paste in babun
+set mouse-=a
+
+" set curson block in babun
+let &t_ti.="\e[1 q"
+let &t_SI.="\e[5 q"
+let &t_EI.="\e[1 q"
+let &t_te.="\e[0 q"
