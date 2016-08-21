@@ -83,9 +83,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# show
+alias b='cd -'
+alias p='pwd'
+alias t='tmux'
+
 # git
-alias gs='git status'
+alias gs='git status -s'
 alias ga='git add -A'
+alias gd='git diff'
+alias gdt='git difftool --tool=vimdiff'
 alias gc='git commit -m'
 alias gp='git push'
 alias gpu='git pull'
