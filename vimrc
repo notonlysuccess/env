@@ -1,11 +1,14 @@
 syntax enable
 set nocompatible
 filetype off
+let mapleader=","
 
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 
+
 Bundle 'gmarik/Vundle.vim'
+
 " Comment. usage:<leader>c<space>=toggle
 Bundle 'scrooloose/nerdcommenter'
 " let g:NERDSpaceDelims=1
@@ -16,11 +19,25 @@ let g:user_emmet_expandabbr_key = '<C-E>'
 " Nerd tree.
 Bundle 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
+
 " Markdown syntax highlighting.
+Bundle 'godlygeek/tabular'
 Bundle 'plasticboy/vim-markdown'
+let g:vim_markdown_folding_disabled = 1
+
+" markdown table
+Bundle 'dhruvasagar/vim-table-mode'
+inoreabbrev <expr> <bar><bar>
+      \ s:isAtStartOfLine('\|\|') ?
+      \ '<c-o>:TableModeEnable<cr><bar><space><bar><left><left>' : '<bar><bar>'
+inoreabbrev <expr> __
+      \ s:isAtStartOfLine('__') ?
+      \ '<c-o>:silent! TableModeDisable<cr>' : '__'
+let g:table_mode_corner="|"
+
 " Vim colors.
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'sickill/vim-monokai'
+Bundle 'tomasr/molokai'
 " Doc generator. :DoxLic :DocAuthor :Dox
 Bundle 'vim-scripts/DoxygenToolkit.vim'
 let g:DoxygenToolkit_briefTag_pre="@synopsis  "
@@ -89,15 +106,6 @@ nmap <F9> :TagbarToggle<CR>
 Bundle 'ternjs/tern_for_vim'
 
 
-" markdown table
-Bundle 'dhruvasagar/vim-table-mode'
-inoreabbrev <expr> <bar><bar>
-      \ s:isAtStartOfLine('\|\|') ?
-      \ '<c-o>:TableModeEnable<cr><bar><space><bar><left><left>' : '<bar><bar>'
-inoreabbrev <expr> __
-      \ s:isAtStartOfLine('__') ?
-      \ '<c-o>:silent! TableModeDisable<cr>' : '__'
-
 fun! s:isAtStartOfLine(mapping)
   let text_before_cursor = getline('.')[0 : col('.')-1]
   let mapping_pattern = '\V' . escape(a:mapping, '\')
@@ -118,6 +126,7 @@ set softtabstop=2
 set shiftwidth=2
 set autoindent
 set rnu
+set number
 set mousehide
 set encoding=utf-8
 set ts=2
@@ -141,10 +150,11 @@ if has("autocmd")
 end
 
 
-
 " Theme
 set background=dark
+" colorscheme solarized
 colorscheme monokai
+" colorscheme desert
 
 " Highlight current line
 "set cursorline
@@ -180,22 +190,21 @@ nmap <S-Tab> i<Tab><Down><Left><Esc>
 imap <S-Tab> <Tab><Down><Left><Left>
 
 
-
 " Jump between <div> and </div>.
 runtime macros/matchit.vim 
 filetype plugin on 
-
-" right click for paste in babun
 set mouse-=a
 
-" set curson block in babun
+" set the block cursor
 let &t_ti.="\e[1 q"
 let &t_SI.="\e[5 q"
 let &t_EI.="\e[1 q"
 let &t_te.="\e[0 q"
 
+" for wxApp lang
+au BufRead,BufNewFile *.wxml set filetype=html
+au BufRead,BufNewFile *.wxss set filetype=css
 
-au BufNewFile,BufRead *.wxml set filetype=html
-au BufNewFile,BufRead *.wxss set filetype=css
-au BufNewFile,BufRead *.less set filetype=css
-
+set nobackup
+set nowritebackup
+set noswapfile
