@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="ys"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -91,7 +91,7 @@ alias rb='npm run build'
 alias rw='npm run watch'
 alias rv='npm run dev'
 alias rt='npm run test'
-alias t='tmux'
+alias t='tmux -2'
 
 # git
 alias ga='git add -A'
@@ -131,3 +131,15 @@ alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
 
 alias login_qcloud='ssh -i "/home/noton/.qcloud_key" ubuntu@139.199.73.145'
+
+alias work='cd /mnt/c/Users/noton/Documents/workspace'
+alias as='cd /mnt/c/Users/noton/Documents/workspace/wxapp-client-lib/src/app-service-engine'
+alias vd='cd /mnt/c/Users/noton/Documents/workspace/wxapp-client-lib/src/virtual-dom'
+alias sdk='cd /mnt/c/Users/noton/Documents/workspace/wxapp-client-lib/src/sdk'
+alias exp='cd /mnt/c/Users/noton/Documents/workspace/wxapp-client-lib/src/exparser'
+alias com='cd /mnt/c/Users/noton/Documents/workspace/wxapp-client-lib/src/wx-component'
+alias tools='cd /mnt/c/Users/noton/Documents/workspace/wechat-devtools'
+alias doc='cd /mnt/c/Users/noton/Documents/workspace/document'
+alias design='cd /mnt/c/Users/noton/Documents/workspace/design'
+alias widget='cd /mnt/c/Users/noton/Documents/workspace/widget'
+alias vendor='cd /mnt/c/Users/noton/Documents/workspace/wxapp-client-lib'

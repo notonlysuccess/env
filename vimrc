@@ -1,4 +1,5 @@
 syntax enable
+set term=screen
 set nocompatible
 filetype off
 let mapleader=","
