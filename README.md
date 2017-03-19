@@ -1,15 +1,19 @@
 # Utils
 
 
+`sudo apt-get install silversearcher-ag`
 [silver searcher][1] - Code search command line
 
+`sudo apt-get install zsh`
+`sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"`
 [oh-my-zsh][2] - z-shell for macOS
 
 [eruda][3] - Mobile web dev tools
 
 [babun][4] - Windows shell
 
-[vimbundle][5] - Vim plugin manager `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+`git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+[vimbundle][5] - Vim plugin manager
 
 [DejaVu Sans Mono][6] - Best progroming font
 
