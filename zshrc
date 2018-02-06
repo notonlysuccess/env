@@ -92,6 +92,7 @@ alias rw='npm run watch'
 alias rv='npm run dev'
 alias rt='npm run test'
 alias t='tmux -2'
+alias npm='node /root/node-v9.1.0-linux-x64/bin/npm'
 
 # git
 alias ga='git add -A'
@@ -130,9 +131,10 @@ alias -s tgz='tar -xzvf'
 alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
 
-alias login_qcloud='ssh -i "/home/noton/.qcloud_key" ubuntu@139.199.73.145'
+alias qcloud='ssh ubuntu@139.199.73.145'
 
 alias work='cd /mnt/c/Users/noton/Documents/workspace'
+alias engine='cd /mnt/c/Users/noton/Documents/workspace/tapmusic/engine'
 alias as='cd /mnt/c/Users/noton/Documents/workspace/wxapp-client-lib/src/app-service-engine'
 alias vd='cd /mnt/c/Users/noton/Documents/workspace/wxapp-client-lib/src/virtual-dom'
 alias sdk='cd /mnt/c/Users/noton/Documents/workspace/wxapp-client-lib/src/sdk'
@@ -143,3 +145,11 @@ alias doc='cd /mnt/c/Users/noton/Documents/workspace/document'
 alias design='cd /mnt/c/Users/noton/Documents/workspace/design'
 alias widget='cd /mnt/c/Users/noton/Documents/workspace/widget'
 alias vendor='cd /mnt/c/Users/noton/Documents/workspace/wxapp-client-lib'
+alias hosts='vi /mnt/c/Windows/System32/drivers/etc/hosts'
+alias music='cd /mnt/c/Users/noton/Documents/workspace/tapmusic/src'
+alias game='cd /mnt/c/Users/noton/Documents/workspace/braintrainingcamp/src'
+
+alias net-out='export https_proxy="http://dev-proxy.oa.com:8080"; export http_proxy="http://dev-proxy.oa.com:8080"'
+alias net-in='export https_proxy=""; export http_proxy=""'
+
+work
