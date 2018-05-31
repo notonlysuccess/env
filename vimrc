@@ -13,7 +13,7 @@ Bundle 'gmarik/Vundle.vim'
 
 " Comment. usage:<leader>c<space>=toggle
 Bundle 'scrooloose/nerdcommenter'
-" let g:NERDSpaceDelims=1
+let g:NERDSpaceDelims=1
 " Quick HTML tags. Ctrl+y+<leader>
 Bundle 'mattn/emmet-vim'
 let g:user_emmet_expandabbr_key = '<C-E>'
@@ -29,13 +29,13 @@ let g:vim_markdown_folding_disabled = 1
 
 " markdown table
 Bundle 'dhruvasagar/vim-table-mode'
-inoreabbrev <expr> <bar><bar>
-      \ s:isAtStartOfLine('\|\|') ?
-      \ '<c-o>:TableModeEnable<cr><bar><space><bar><left><left>' : '<bar><bar>'
-inoreabbrev <expr> __
-      \ s:isAtStartOfLine('__') ?
-      \ '<c-o>:silent! TableModeDisable<cr>' : '__'
-let g:table_mode_corner="|"
+" inoreabbrev <expr> <bar><bar>
+      " \ s:isAtStartOfLine('\|\|') ?
+      " \ '<c-o>:TableModeEnable<cr><bar><space><bar><left><left>' : '<bar><bar>'
+" inoreabbrev <expr> __
+      " \ s:isAtStartOfLine('__') ?
+      " \ '<c-o>:silent! TableModeDisable<cr>' : '__'
+" let g:table_mode_corner="|"
 
 " Vim colors.
 Bundle 'sickill/vim-monokai'
